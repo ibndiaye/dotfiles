@@ -12,7 +12,7 @@ CONFIG_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/config/"
 WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/wallpapers"
 
 #backup configs
-cp -r "$CONFIG_PATHS/conky" $CONFIG_SAVE_PATH
+# cp -r "$ CONFIG_PATHS/conky" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/cava" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/fish" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/rofi" $CONFIG_SAVE_PATH

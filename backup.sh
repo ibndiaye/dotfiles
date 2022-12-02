@@ -2,7 +2,7 @@
 
 #listNames=("cava"  "conky" "fish" "rofi" "nvim" "neofetch" "kitty" "i3" "picom")
 
-printf "Backing up..."
+echo "Backing up..."
 
 CONFIG_PATHS="$HOME/.config"
 WP_PATH="$HOME/Pictures/wallpapers/"
@@ -26,4 +26,4 @@ cp -r "$CONFIG_PATHS/MangoHud" $CONFIG_SAVE_PATH
 cp -r "$WP_PATH/" $WP_SAVE_PATH
 
 
-printf "everythings backed up"
+echo "Backup with success"

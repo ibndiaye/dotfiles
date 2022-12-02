@@ -16,7 +16,7 @@ WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/wallpapers"
 cp -r "$CONFIG_PATHS/cava" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/fish" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/rofi" $CONFIG_SAVE_PATH
-sudo cp -r "$CONFIG_PATHS/nvim" $CONFIG_SAVE_PATH
+# sudo cp -r "$CONFIG_PATHS/nvim" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/neofetch" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/kitty" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/i3" $CONFIG_SAVE_PATH

@@ -20,7 +20,6 @@ sudo cp -r "$CONFIG_PATHS/nvim" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/neofetch" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/kitty" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/i3" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/picom.conf" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/MangoHud" $CONFIG_SAVE_PATH
 
 #backup wp

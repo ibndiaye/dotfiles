@@ -741,9 +741,21 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
 
 #nord
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #81a1c1 #81a1c1 #1a1826 #81a1c1   #81a1c1
+# client.focused_inactive #4c566a #4c566a #ffffff #4c566a   #4c566a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #cc241d #900000 #ffffff #cc241d   #cc241d
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#
+# client.background       #ffffff
+#
+
+
+#adaptive
 # class                 border  backgr. text    indicator child_border
-client.focused          #81a1c1 #81a1c1 #1a1826 #81a1c1   #81a1c1
-client.focused_inactive #4c566a #4c566a #ffffff #4c566a   #4c566a
+client.focused          #b0c965 #b0c965 #1a1826 #b0c965   #b0c965
+client.focused_inactive #263035 #263035 #ffffff #263035   #263035
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #cc241d #900000 #ffffff #cc241d   #cc241d
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c

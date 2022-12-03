@@ -165,4 +165,6 @@ modi: "window,drun,ssh,run";
 //@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
 //@theme "/usr/share/rofi/themes/android_notification.rasi"
 //@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+@theme "/usr/share/rofi/themes/android_notification.rasi"

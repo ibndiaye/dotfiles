@@ -14,6 +14,10 @@ then
     # makepkg -si
 fi
 
+ #install fish dependency
+    # yay -S --noconfirm fish exa bat lolcat 
+    # curl -sS https://starship.rs/install.sh | sh
+
 
 printf "Quick Setup Script\n 1) Clone Dotfiles move to direcotry\n 2) Symlink Preconfigured Configs\n 3) Install yay and pkgs\n 4) Virt-Man setup"
 echo "Selection:" 
@@ -52,7 +56,7 @@ fi
 if (($input==3))
 then
     echo "installing packages..."
-    yay -S --noconfirm flatpak flameshot-git neofetch nerd-fonts-source-code-pro nvidia-dkms nvidia-settings spotify-adblock-git timeshift timeshift-autosnap tldr grub-btrfs grub-btrfs
+    yay -S --noconfirm flatpak flameshot-git ranger polybar fish cava kitty neofetch nerd-fonts-source-code-pro nvidia-dkms nvidia-settings spotify-adblock-git timeshift timeshift-autosnap tldr grub-btrfs grub-btrfs
 fi
 
 #virt man setup

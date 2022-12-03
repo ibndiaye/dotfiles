@@ -9,6 +9,7 @@ WP_PATH="$HOME/Pictures/wallpapers/"
 
 
 CONFIG_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/config/"
+GIT_REPO="$HOME/Documents/GitHub/dotfiles/"
 WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/wallpapers"
 
 #backup configs
@@ -29,3 +30,13 @@ cp -r "$WP_PATH/" $WP_SAVE_PATH
 
 
 echo "Backup with success"
+
+printf "push to github? y/n: "
+read answer
+if (($answer==y))
+then
+  read -p "Commit message: " commitMsg
+  cd $GIT_REPO && git add . && git commit -m "$commitMsg" && git push origin main
+  else
+    exit
+fi

@@ -6,6 +6,7 @@
 
 mkdir "$HOME/Documents/GitHub/"
 mydots="$HOME/Documents/GitHub/dotfiles/config"
+mywp="$HOME/Documents/GitHub/dotfiles/wallpapers"
 CONFIG_PATH="$HOME/.config/"
 
 # clone dots
@@ -25,6 +26,7 @@ ln -nsf $mydots/i3 $CONFIG_PATH
 ln -nsf $mydots/MangoHud $CONFIG_PATH
 ln -nsf $mydots/ranger $CONFIG_PATH
 ln -nsf $mydots/polybar $CONFIG_PATH  
+ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
 echo "done symlinking"
 
 

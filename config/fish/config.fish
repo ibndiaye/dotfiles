@@ -26,6 +26,7 @@ alias gitc='git clone'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias stx="startx"
 alias pm="sudo pacman"
+alias unlock='sudo rm /var/lib/pacman/db.lck'
 ########################################
 ########################################
 
@@ -39,4 +40,7 @@ end
 starship init fish | source
 
 neofetch
+alias tmpats='gamemoderun mangohud truckersmp-cli --disable-steamruntime --rendering-backend dx11 --proton --game-options="-nointro" -vv start atsmp'
+alias tmpets='gamemoderun mangohud truckersmp-cli --disable-steamruntime --rendering-backend dx11 --proton --game-options="-nointro" -vv start ets2mp'
+
 #alsi

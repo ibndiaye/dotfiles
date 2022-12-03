@@ -36,7 +36,7 @@ read answer
 if (($answer==y))
 then
   read -p "Commit message: " commitMsg
-  cd $GIT_REPO && git add . && git commit -m "$commitMsg" && git push origin main
+  cd $GIT_REPO && git add . && git commit -m "$commitMsg" && git pull && git push origin main
   else
     exit
 fi

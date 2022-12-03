@@ -5,12 +5,12 @@
 echo "Backing up..."
 
 CONFIG_PATHS="$HOME/.config"
-WP_PATH="$HOME/Pictures/wallpapers/"
+WP_PATH="$HOME/Pictures/wallpapers"
 
 
 CONFIG_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/config/"
 GIT_REPO="$HOME/Documents/GitHub/dotfiles/"
-WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/wallpapers"
+WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/wallpapers/"
 
 #backup configs
 # cp -r "$ CONFIG_PATHS/conky" $CONFIG_SAVE_PATH

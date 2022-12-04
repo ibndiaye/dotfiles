@@ -2,6 +2,9 @@
 #
 #initially created 2 dec 2022
 
+#source scripts
+
+
 #install yay 
 
 if ! command -v yay &> /dev/null
@@ -19,13 +22,13 @@ fi
     # curl -sS https://starship.rs/install.sh | sh
 
 
-printf "Quick Setup Script\n 1) Clone Dotfiles move to direcotry\n 2) Symlink Preconfigured Configs\n 3) Install yay and pkgs\n 4) Virt-Man setup\n"
+    printf "Quick Setup Script\n 1) Clone Dotfiles move to direcotry\n 2) Symlink Preconfigured Configs\n 3) Install yay and pkgs\n 4) Virt-Man setup\n 5) Backup + Push to Github\n"
 echo "Selection:" 
 read input
 
 
 
-GIT_DIR="$HOME/Documents/GitHub/"
+GIT_DIR="$HOME/Documents/GitHub"
 mydots="$HOME/Documents/GitHub/dotfiles/config"
 mywp="$HOME/Documents/GitHub/dotfiles/wallpapers"
 CONFIG_PATH="$HOME/.config/"
@@ -54,8 +57,9 @@ then
     for d in "${LIST[@]}"
     do
         ln -nsf $mydots/"$d" $CONFIG_PATH
-        ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
     done
+
+    ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
     # ln -nsf $mydots/cava $CONFIG_PATH
     # ln -nsf $mydots/fish $CONFIG_PATH
     # ln -nsf $mydots/rofi $CONFIG_PATH
@@ -88,3 +92,11 @@ then
     yay -S --noconfirm libguestfs qemu-emulators-full qemu-block-gluster qemu-block-iscsi samba
     echo "all done"
 fi
+
+if (($input==5))
+then
+    source scripts/backup.sh
+fi
+
+
+export $LIST

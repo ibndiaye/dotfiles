@@ -1,6 +1,9 @@
 #!/bin/bash
 #
 #
+DIR=`pwd`
+FDIR="$HOME/.local/share/fonts"
+
 
 #install yay if not present
 echo "Checking if yay is present..."
@@ -31,11 +34,18 @@ then
       yay -S --noconfirm "$p"
       echo "$p installed"
     done
+    #get starship for fish
     echo "installing starship.."
     curl -sS https://starship.rs/install.sh | sh
     echo "done"
+    
+    #install fonts for polybar-themes
+    echo -e "\n[*] Installing fonts..."
+    cd "$HOME/Documents/" && git clone https://github.com/adi1090x/polybar-themes
+	[[ ! -d "$FDIR" ]] && mkdir -p "$FDIR"
+	cp -rf $HOME/Documents/polybar-themes/fonts/* "$FDIR"
+	rm -r $HOME/Documents/polybar-themes/
 fi
-
 
 #virt man setup
 if (($input==2))

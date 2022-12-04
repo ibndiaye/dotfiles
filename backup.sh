@@ -24,6 +24,7 @@ cp -r "$CONFIG_PATHS/i3" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/MangoHud" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/polybar" $CONFIG_SAVE_PATH
 cp -r "$CONFIG_PATHS/ranger" $CONFIG_SAVE_PATH
+cp -r "$CONFIG_PATHS/starship.toml" $CONFIG_SAVE_PATH
 
 #backup wp
 cp -r "$WP_PATH/" $WP_SAVE_PATH
@@ -33,7 +34,7 @@ echo "Backup with success"
 
 printf "push to github? y/n: "
 read answer
-if (($answer==y))
+if (($answer=="y"))
 then
   read -p "Commit message: " commitMsg
   cd $GIT_REPO && git add . && git commit -m "$commitMsg" && git pull && git push origin main

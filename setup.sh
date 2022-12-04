@@ -19,11 +19,13 @@ fi
     # curl -sS https://starship.rs/install.sh | sh
 
 
-printf "Quick Setup Script\n 1) Clone Dotfiles move to direcotry\n 2) Symlink Preconfigured Configs\n 3) Install yay and pkgs\n 4) Virt-Man setup"
+printf "Quick Setup Script\n 1) Clone Dotfiles move to direcotry\n 2) Symlink Preconfigured Configs\n 3) Install yay and pkgs\n 4) Virt-Man setup\n"
 echo "Selection:" 
 read input
 
 
+
+GIT_DIR="$HOME/Documents/GitHub/"
 mydots="$HOME/Documents/GitHub/dotfiles/config"
 mywp="$HOME/Documents/GitHub/dotfiles/wallpapers"
 CONFIG_PATH="$HOME/.config/"
@@ -31,8 +33,16 @@ CONFIG_PATH="$HOME/.config/"
 if (($input==1))
 then
     echo "cloning git repo - dotfiles, and moving to the right path"
-    mkdir "$HOME/Documents/GitHub/"
-    cd && git clone https://github.com/ibndiaye/dotfiles && mv dotfiles $mydots
+    if [[ -d "$GIT_DIR" ]]
+    then
+        #echo "exists"
+        cd && git clone https://github.com/ibndiaye/dotfiles && mv dotfiles $mydots
+    else
+        echo "Creating directory"
+        mkdir $GIT_DIR
+        echo "cloning"
+        cd && git clone https://github.com/ibndiaye/dotfiles && mv dotfiles $mydots
+    fi
 fi
 
 if (($input==2))
@@ -48,6 +58,7 @@ then
     ln -nsf $mydots/MangoHud $CONFIG_PATH
     ln -nsf $mydots/ranger $CONFIG_PATH
     ln -nsf $mydots/polybar $CONFIG_PATH  
+    ln -nsf $mydots/starship.toml $CONFIG_PATH  
     ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
     echo "done symlinking"
 fi
@@ -62,11 +73,11 @@ fi
 #virt man setup
 if (($input==4))
 then
-    echo "Installing and setting up virt-manager"
+    echo "Installing and setting up virt-manager..."
     sudo pacman -S --needed virt-manager qemu-base libvirt edk2-ovmf dnsmasq vde2 bridge-utils iptables-nft dmidecode
     sudo systemctl enable --now libvirtd.service
     systemctl status libvirtd.service
     sudo virsh net-autostart default 
     yay -S --noconfirm libguestfs qemu-emulators-full qemu-block-gluster qemu-block-iscsi samba
-    
+    echo "all done"
 fi

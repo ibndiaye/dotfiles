@@ -23,25 +23,14 @@ do
 done
 
 
-# # cp -r "$ CONFIG_PATHS/conky" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/cava" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/fish" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/rofi" $CONFIG_SAVE_PATH
-# # sudo cp -r "$CONFIG_PATHS/nvim" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/neofetch" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/kitty" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/i3" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/MangoHud" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/polybar" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/ranger" $CONFIG_SAVE_PATH
-# cp -r "$CONFIG_PATHS/starship.toml" $CONFIG_SAVE_PATH
-
 #backup wp
 cp -r "$WP_PATH/" $WP_SAVE_PATH
 
 
 echo "Backup with success to $CONFIG_SAVE_PATH"
 
+
+#Github section
 printf "push to github? y/n: "
 read answer
 if [[ "$answer" == "y" ]]

@@ -10,7 +10,7 @@ mywp="$HOME/Documents/GitHub/dotfiles/wallpapers"
 CONFIG_PATH="$HOME/.config"
 
 
-printf "Setup Section\n 1) Clone Git Repo and relocate it\n 2) Symlink cloned configs"
+printf "Setup Section\n 1) Clone Git Repo and relocate it\n 2) Symlink cloned configs\n"
 read -p "Selection: " input
 
 if (($input==1))
@@ -18,13 +18,19 @@ then
     echo "cloning git repo - dotfiles, and moving to the right path"
     if [[ -d "$GIT_DIR" ]]
     then
-        #echo "exists"
-        cd && git clone https://github.com/ibndiaye/dotfiles && mv -f dotfiles $mydots
+        cd
+        if (( -d "dotfiles" ))
+        then
+            rm -r dotfiles
+        else
+            #echo "exists"
+            cd && git clone https://github.com/ibndiaye/dotfiles && mv -f dotfiles $GIT_DIR
+        fi
     else
         echo "Creating directory"
         mkdir $GIT_DIR
         echo "cloning"
-        cd && git clone https://github.com/ibndiaye/dotfiles && mv -f dotfiles $mydots
+        cd && git clone https://github.com/ibndiaye/dotfiles && mv -f dotfiles $GIT_DIR
     fi
 fi
 

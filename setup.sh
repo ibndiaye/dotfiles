@@ -2,10 +2,10 @@
 #
 #initially created 2 dec 2022
 
-#source scripts
+#main folders
+LIST=("cava" "fish" "rofi" "neofetch" "kitty" "i3" "MangoHud" "ranger" "polybar" "starship.toml")
 
-
-#install yay 
+#install yay if not present
 
 if ! command -v yay &> /dev/null
 then
@@ -31,7 +31,7 @@ read input
 GIT_DIR="$HOME/Documents/GitHub"
 mydots="$HOME/Documents/GitHub/dotfiles/config"
 mywp="$HOME/Documents/GitHub/dotfiles/wallpapers"
-CONFIG_PATH="$HOME/.config/"
+CONFIG_PATH="$HOME/.config"
 
 if (($input==1))
 then
@@ -51,12 +51,17 @@ fi
 if (($input==2))
 then
      echo "symlinking..."
-    LIST=("cava" "fish" "rofi" "neofetch" "kitty" "i3" "MangoHud" "ranger" "polybar" "starship.toml")
+
     cd $mydots
     
     for d in "${LIST[@]}"
     do
-        ln -nsf $mydots/"$d" $CONFIG_PATH
+        if [[ -d $CONFIG_PATH/$d ]]
+        then 
+            echo "$d already exists, removing and replacing"
+            rm -r $CONFIG_PATH/$d
+        fi
+        ln -nsf $mydots/"$d" $CONFIG_PATH/
     done
 
     ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
@@ -99,4 +104,4 @@ then
 fi
 
 
-export $LIST
+# export $LIST="/scripts/backup.sh"

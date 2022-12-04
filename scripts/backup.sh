@@ -1,6 +1,9 @@
 #!/bin/bash
 
-#listNames=("cava"  "conky" "fish" "rofi" "nvim" "neofetch" "kitty" "i3" "picom")
+
+# source $(. ./setup.sh export)
+
+LIST=("cava" "fish" "rofi" "neofetch" "kitty" "i3" "MangoHud" "ranger" "polybar" "starship.toml")
 
 echo "Backing up..."
 
@@ -8,25 +11,30 @@ CONFIG_PATHS="$HOME/.config"
 WP_PATH="$HOME/Pictures/wallpapers"
 
 
-CONFIG_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/config/"
+CONFIG_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/config"
 GIT_REPO="$HOME/Documents/GitHub/dotfiles/"
 WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/"
 
 #backup configs
 
+for d in "${LIST[@]}" 
+do
+  cp -r "$CONFIG_PATHS/$d" $CONFIG_SAVE_PATH
+done
 
-# cp -r "$ CONFIG_PATHS/conky" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/cava" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/fish" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/rofi" $CONFIG_SAVE_PATH
-# sudo cp -r "$CONFIG_PATHS/nvim" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/neofetch" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/kitty" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/i3" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/MangoHud" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/polybar" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/ranger" $CONFIG_SAVE_PATH
-cp -r "$CONFIG_PATHS/starship.toml" $CONFIG_SAVE_PATH
+
+# # cp -r "$ CONFIG_PATHS/conky" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/cava" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/fish" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/rofi" $CONFIG_SAVE_PATH
+# # sudo cp -r "$CONFIG_PATHS/nvim" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/neofetch" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/kitty" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/i3" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/MangoHud" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/polybar" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/ranger" $CONFIG_SAVE_PATH
+# cp -r "$CONFIG_PATHS/starship.toml" $CONFIG_SAVE_PATH
 
 #backup wp
 cp -r "$WP_PATH/" $WP_SAVE_PATH

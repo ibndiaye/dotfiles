@@ -47,20 +47,27 @@ fi
 
 if (($input==2))
 then
-    echo "symlinking..."
+     echo "symlinking..."
+    LIST=("cava" "fish" "rofi" "neofetch" "kitty" "i3" "MangoHud" "ranger" "polybar" "starship.toml")
     cd $mydots
-    ln -nsf $mydots/cava $CONFIG_PATH
-    ln -nsf $mydots/fish $CONFIG_PATH
-    ln -nsf $mydots/rofi $CONFIG_PATH
-    ln -nsf $mydots/neofetch $CONFIG_PATH
-    ln -nsf $mydots/kitty $CONFIG_PATH
-    ln -nsf $mydots/i3 $CONFIG_PATH
-    ln -nsf $mydots/MangoHud $CONFIG_PATH
-    ln -nsf $mydots/ranger $CONFIG_PATH
-    ln -nsf $mydots/polybar $CONFIG_PATH  
-    ln -nsf $mydots/starship.toml $CONFIG_PATH  
-    ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
-    echo "done symlinking"
+    
+    for d in "${LIST[@]}"
+    do
+        ln -nsf $mydots/"$d" $CONFIG_PATH
+        ln -nsf $mywp/ "$HOME/Pictures/wallpapers"
+    done
+    # ln -nsf $mydots/cava $CONFIG_PATH
+    # ln -nsf $mydots/fish $CONFIG_PATH
+    # ln -nsf $mydots/rofi $CONFIG_PATH
+    # ln -nsf $mydots/neofetch $CONFIG_PATH
+    # ln -nsf $mydots/kitty $CONFIG_PATH
+    # ln -nsf $mydots/i3 $CONFIG_PATH
+    # ln -nsf $mydots/MangoHud $CONFIG_PATH
+    # ln -nsf $mydots/ranger $CONFIG_PATH
+    # ln -nsf $mydots/polybar $CONFIG_PATH  
+    # ln -nsf $mydots/starship.toml $CONFIG_PATH  
+
+     echo "done symlinking"
 fi
 
 

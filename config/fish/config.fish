@@ -27,6 +27,8 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias stx="startx"
 alias pm="sudo pacman"
 alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias lg="lazygit"
+alias clt="clear"
 ########################################
 ########################################
 

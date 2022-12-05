@@ -23,7 +23,7 @@ fi
 
 
 #program installation
-pkglist=("xfce4-clipman" "flatpak" "flameshot-git" "ranger" "polybar" "polybar" "bpytop" "fish" "exa" "bat" "lolcat"
+pkglist=("xfce4-clipman" "flatpak" "kdeconnect" "flameshot-git" "ranger" "polybar" "polybar" "bpytop" "fish" "exa" "bat" "lolcat"
   "cava" "kitty" "neofetch" "nerd-fonts-source-code-pro" "nvidia-dkms" "nvidia-settings" "spotify-adblock-git" "timeshift" "timeshift-autosnap" "tldr" "grub-btrfs")
 if (( $input == 1))
 then

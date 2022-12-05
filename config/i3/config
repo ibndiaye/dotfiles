@@ -817,3 +817,4 @@ bindsym mod1+v exec --no-startup-id xfce4-popup-clipman
 
 # gaps inner 20
 # gaps outer 5
+exec --no-startup-id /usr/lib/kdeconnectd

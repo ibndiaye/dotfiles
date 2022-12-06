@@ -3,7 +3,7 @@
 
 # source $(. ./setup.sh export)
 
-LIST=("cava" "fish" "rofi" "neofetch" "kitty" "i3" "MangoHud" "ranger" "polybar" "starship.toml")
+# LIST=("cava" "fish" "rofi" "neofetch" "kitty" "i3" "MangoHud" "ranger" "polybar" "starship.toml")
 
 echo "Backing up..."
 
@@ -11,24 +11,17 @@ CONFIG_PATHS="$HOME/.config"
 WP_PATH="$HOME/Pictures/wallpapers"
 
 
-CONFIG_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/config"
-GIT_REPO="$HOME/Documents/GitHub/dotfiles/"
-WP_SAVE_PATH="$HOME/Documents/GitHub/dotfiles/"
+CONFIG_SAVE_PATH="$HOME/dotfiles/config"
+GIT_REPO="$HOME/dotfiles/"
+WP_SAVE_PATH="$HOME/dotfiles/"
 
 #backup configs
+cp -r "$CONFIG_PATHS" $CONFIG_SAVE_PATH
 
-for d in "${LIST[@]}" 
-do
-  cp -r "$CONFIG_PATHS/$d" $CONFIG_SAVE_PATH
-done
-
-
-#backup wp
 cp -r "$WP_PATH/" $WP_SAVE_PATH
 
 
 echo "Backup with success to $CONFIG_SAVE_PATH"
-
 
 #Github section
 printf "push to github? y/n: "

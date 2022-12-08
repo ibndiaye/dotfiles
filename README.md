@@ -1,16 +1,10 @@
-##HELLO
-This is 
-
-
-
-
 # dotfiles
+
 my personal dotfiles and some scripts to get setup quickly
 arch (btw) based distros for now
 
 **Screenshot:**
-
-![image][https://cdn.discordapp.com/attachments/1046089102451290144/1049746897096691792/image.png]
+![image](https://github.com/ibndiaye/dotfiles/blob/main/preview.png?raw=true)
 
 **Sources:**
 

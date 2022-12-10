@@ -12,4 +12,5 @@ arch (btw) based distros for now
 [Wallpapers](https://github.com/fkf-studios/wallpapers)
 
 [Amazing Fish config](https://github.com/fkf-studios/fishy)
+
 [Polybar Themes](https://github.com/adi1090x/polybar-themes)

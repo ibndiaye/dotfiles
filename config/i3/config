@@ -816,6 +816,9 @@ client.background       #ffffff
 exec --no-startup-id nitrogen --restore & r
 bindsym mod1+v exec --no-startup-id xfce4-popup-clipman
 
-# gaps inner 20
-# gaps outer 5
+gaps inner 20
+gaps outer 0
 exec --no-startup-id /usr/lib/kdeconnectd
+bindsym Control+mod1+b exec --no-startup-id scrcpy --hid-keyboard
+exec "setxkbmap -layout us"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"

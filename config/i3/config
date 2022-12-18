@@ -394,14 +394,17 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id variety
 
 # clipman
-exec --no-startup-id xfce4-clipman &
+# exec --no-startup-id xfce4-clipman &
+
+# copyq
+exec --no-startup-id copyq &
 
 # Conky
 #exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+# exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
+# exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 # for other Arch Linux based distros
 # exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 
@@ -607,13 +610,13 @@ bindsym mod1+Down exec --no-startup-id variety --resume
 ################# variety with pywal for your wallpapers/colour schemes
 
 # next wallpaper
-bindsym mod1+Shift+n exec --no-startup-id variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-# previous wallpaper
-bindsym mod1+Shift+p exec --no-startup-id variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-# trash wallpaper
-bindsym mod1+Shift+t exec --no-startup-id variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
-# Update Wallpaper
-bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)
+# bindsym mod1+Shift+n exec --no-startup-id variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# # previous wallpaper
+# bindsym mod1+Shift+p exec --no-startup-id variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# # trash wallpaper
+# bindsym mod1+Shift+t exec --no-startup-id variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# # Update Wallpaper
+# bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)
 
 ################# audio settings                   
 
@@ -672,8 +675,8 @@ popup_during_fullscreen smart
 # delete or uncomment the following lines if you do not have it or do not
 # want it
 
-for_window [class="^.*"] border pixel 2
-gaps inner 5
+for_window [class="^.*"] border pixel 5
+gaps inner 15
 gaps outer 5
 # smart_gaps on
 # smart_borders on
@@ -816,8 +819,6 @@ client.background       #ffffff
 exec --no-startup-id nitrogen --restore & r
 bindsym mod1+v exec --no-startup-id xfce4-popup-clipman
 
-gaps inner 20
-gaps outer 0
 exec --no-startup-id /usr/lib/kdeconnectd
 bindsym Control+mod1+b exec --no-startup-id scrcpy --hid-keyboard
 exec "setxkbmap -layout us"

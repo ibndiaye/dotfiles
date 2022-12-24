@@ -118,6 +118,8 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
 # start dmenu
 bindsym $mod+shift+d exec --no-startup-id "rofi -show drun -show-icons"
+bindsym $mod+shift+e exec --no-startup-id "rofi -show emoji"
+bindsym $mod+shift+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
 
 # start xfce4-appfinder
 bindsym mod1+F2 exec --no-startup-id xfce4-appfinder --collapsed
@@ -155,7 +157,7 @@ mode "$mode_system" {
 }
 
 # ArcoLinux Logout
-bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
+# bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
 bindsym $mod+X exec --no-startup-id archlinux-logout
 
 ################# reload changed configuration     
@@ -163,7 +165,7 @@ bindsym $mod+X exec --no-startup-id archlinux-logout
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 
 ################# Stopping an application          
 
@@ -897,10 +899,10 @@ client.background       #ffffff
 # exec --no-startup-id unclutter
 
 exec --no-startup-id nitrogen --restore & r
-bindsym mod1+v exec --no-startup-id xfce4-popup-clipman
+# bindsym mod1+v exec --no-startup-id xfce4-popup-clipman
 
 exec --no-startup-id /usr/lib/kdeconnectd
 bindsym Control+mod1+b exec --no-startup-id scrcpy --hid-keyboard
 exec "setxkbmap -layout us"
 
-
+exec --no-startup-id greenclip daemon

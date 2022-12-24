@@ -4,7 +4,7 @@ display-drun:"Applications";
 display-emoji:"Emojis:";
 display-calc:"Calculator:";
  /* width: 50; */
- lines: 15 ;
+ /* lines: 15 ; */
     columns: 2;
  font: "JetBrainsMono Nerd Font Medium 12";
 /*  bw: 1;*/

@@ -16,7 +16,8 @@ fish_add_path ~/usr/local/bin
 #########################################
 #alias nvim='lvim'
 #alias emacs='emacsclient -c -a 'emacs''
-#alis nv='nvim'
+alias nv='nvim'
+alias rg='ranger'
 alias mkex='chmod +x'
 alias smi='sudo make install'
 alias els='exa -l --color=always --group-directories-first --icons'

@@ -4,6 +4,8 @@ my personal dotfiles and some scripts to get setup quickly
 arch (btw) based distros for now
 
 **Previews:**
+![image](https://github.com/ibndiaye/dotfiles/blob/main/preview2.png?raw=true)
+
 ![image](https://github.com/ibndiaye/dotfiles/blob/main/preview1.png?raw=true)
 
 ![image](https://github.com/ibndiaye/dotfiles/blob/main/preview.png?raw=true)

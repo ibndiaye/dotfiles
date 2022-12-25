@@ -1,6 +1,6 @@
 configuration {
 modi: "window,drun,run,emoji,calc";
-display-drun:"Applications";
+display-drun:"drun";
 display-emoji:"Emojis:";
 display-calc:"Calculator:";
  /* width: 50; */
@@ -22,7 +22,7 @@ display-calc:"Calculator:";
 /*  run-shell-command: "{terminal} -e {cmd}";*/
 /*  window-command: "wmctrl -i -R {window}";*/
 /*  window-match-fields: "all";*/
- icon-theme: "Papirus";
+/* icon-theme: "Papirus";*/
 /*  drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*  drun-categories: ;*/
 /*  drun-show-actions: false;*/

@@ -734,10 +734,22 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 bar {
     height 25
     workspace_buttons yes
-	font pango:Noto Sans 12
+	# font pango:Noto Sans 12
+	font pango:DejaVu Sans Mono, FontAwesome 12
 	position top
     # position bottom
+    status_command i3status-rs ~/.config/i3/config-rs.toml
 
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
+    
 	# system icons
     # tray_output none
     # tray_output $firstMonitor
@@ -749,8 +761,7 @@ bar {
     # you will get the standard i3status bar
     # Second one is the standard statusbar with my personal settings
 
-	# status_command i3status
-    status_command i3status -c ~/.config/i3/i3status.conf
+	    # status_command i3status -c ~/.config/i3/i3status.conf
 
     # OPTION 2 : i3blocks
 
@@ -798,17 +809,17 @@ bar {
     #     urgent_workspace      #a9a9a9 #d42121 #FFFFFF
     #     }
     
-       colors {
-              background #2f343f
-              statusline #2f343f
-              separator #4b5262
-
-              # colour of border, background, and text
-              focused_workspace       #2f343f #bf616a #d8dee8
-              active_workspace        #2f343f #2f343f #d8dee8
-              inactive_workspace      #2f343f #2f343f #d8dee8
-              urgent_workspacei       #2f343f #ebcb8b #2f343f
-          }
+       # colors {
+       #        background #2f343f
+       #        statusline #2f343f
+       #        separator #4b5262
+       #
+       #        # colour of border, background, and text
+       #        focused_workspace       #2f343f #bf616a #d8dee8
+       #        active_workspace        #2f343f #2f343f #d8dee8
+       #        inactive_workspace      #2f343f #2f343f #d8dee8
+       #        urgent_workspacei       #2f343f #ebcb8b #2f343f
+       #    }
 
     }
 

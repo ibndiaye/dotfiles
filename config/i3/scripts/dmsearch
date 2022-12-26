@@ -61,6 +61,7 @@ declare -a options=(
 "netflix - https://www.netflix.com/search?q="
 "tg - https://torrentgalaxy.to/torrents.php?search="
 "rutracker - https://rutracker.org/forum/tracker.php?nm="
+"archive - https://archive.org/search.php?query=l"
 # "quit"
 )
 

@@ -49,6 +49,7 @@ block = "nvidia_gpu"
 label = ""
 show_memory = false
 show_clocks = false
+show_temperature = false
 interval = 1
 
 [[block]]

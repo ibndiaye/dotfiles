@@ -5,14 +5,14 @@ icons = "awesome"
 
 [[block]]
 block = "focused_window"
-max_width = 20
+max_width = 23
 show_marks = "visible"
 format="{combo}"
 
-# [[block]]
-# block = "speedtest"
-# interval = 1800
-# format = "{ping}{speed_down:4*B}{speed_up:4*B}"
+[[block]]
+block = "speedtest"
+interval = 1800
+format = "{speed_down:4*B}{speed_up:4*B}"
 
 [[block]]
 block = "uptime"
@@ -21,8 +21,8 @@ block = "uptime"
 block = "disk_space"
 path = "/home"
 alias = "/"
-info_type = "free"
-format="{icon} {free}({percentage})"
+info_type = "available"
+format="{icon} {available}"
 unit = "GB"
 interval = 600
 warning = 20.0
@@ -40,9 +40,16 @@ alert = 10.0
 block = "music"
 player = "spotify"
 buttons = ["prev", "play", "next"]
-max_width=13
+max_width=10
 dynamic_width=true
 # hide_when_empty=true
+
+[[block]]
+block = "nvidia_gpu"
+label = ""
+show_memory = false
+show_clocks = false
+interval = 1
 
 [[block]]
 block = "memory"
@@ -71,7 +78,7 @@ format_up_to_date = "None"
 critical_updates_regex = "(linux|linux-lts|linux-zen)"
 # aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
 aur_command = "yay -Qua"
-on_click = 'fakeroot pacman -Qu --dbpath /tmp/checkup-db-1000/ | rg -v ignored | rofi -dmenu'
+on_click = "fakeroot pacman -Qu --dbpath /tmp/checkup-db-brams/ | kitty yay"
 
 
 [[block]]

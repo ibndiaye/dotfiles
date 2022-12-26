@@ -32,7 +32,7 @@ declare -a options=(
 "googlenews - https://news.google.com/search?q="
 "imdb - https://www.imdb.com/find?q="
 "reddit - https://www.reddit.com/search/?q="
-"socialblade - https://socialblade.com/youtube/user/"
+"socialblade - ttps://socialblade.com/search/search?query="
 "sourceforge - https://sourceforge.net/directory/?q="
 "stackoverflow - https://stackoverflow.com/search?q="
 "startpage - https://www.startpage.com/do/dsearch?query="

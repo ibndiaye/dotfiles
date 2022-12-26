@@ -53,7 +53,7 @@ declare -a options=(
 # "wolfram - https://www.wolframalpha.com/input/?i="
 "youtube - https://www.youtube.com/results?search_query="
 "larousse fr - https://www.larousse.fr/dictionnaires/francais/"
-"quit"
+# "quit"
 )
 
 # Picking a search engine.

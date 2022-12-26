@@ -62,6 +62,8 @@ declare -a options=(
 "tg - https://torrentgalaxy.to/torrents.php?search="
 "rutracker - https://rutracker.org/forum/tracker.php?nm="
 "archive - https://archive.org/search.php?query=l"
+"pdfdrive - https://www.pdfdrive.com/search?q="
+"libgenis - https://libgen.is/search.php?req="
 # "quit"
 )
 

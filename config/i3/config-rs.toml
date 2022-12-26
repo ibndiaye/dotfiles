@@ -44,13 +44,13 @@ max_width=10
 dynamic_width=true
 # hide_when_empty=true
 
-[[block]]
-block = "nvidia_gpu"
-label = ""
-show_memory = false
-show_clocks = false
-show_temperature = false
-interval = 1
+# [[block]]
+# block = "nvidia_gpu"
+# label = ""
+# show_memory = false
+# show_clocks = false
+# show_temperature = false
+# interval = 1
 
 [[block]]
 block = "memory"

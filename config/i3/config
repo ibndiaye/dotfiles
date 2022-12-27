@@ -734,7 +734,7 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
 ################# bar appearance                   
 bar {
-    height 25
+    height 30
     workspace_buttons yes
 	# font pango:Noto Sans 12
 	font pango:JetBrains Mono, FontAwesome 12

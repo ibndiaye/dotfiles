@@ -81,7 +81,7 @@ format_up_to_date = "None"
 critical_updates_regex = "(linux|linux-lts|linux-zen)"
 # aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
 aur_command = "yay -Qua"
-
+on_click = "fakeroot pacman -Qu --dbpath /tmp/checkup-db-brams/ | kitty yay "
 
 [[block]]
 block = "sound"

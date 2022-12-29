@@ -380,7 +380,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # exec --no-startup-id blueberry-tray
 
 # network
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # num lock activated
 exec_always --no-startup-id numlockx on
@@ -393,7 +393,7 @@ exec_always --no-startup-id numlockx on
 
 # volume
 # exec --no-startup-id pasystray
-exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon
 
 # variety
 # exec --no-startup-id variety
@@ -402,7 +402,7 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id xfce4-clipman &
 
 # copyq
-exec --no-startup-id copyq &
+# exec --no-startup-id copyq &
 
 # Conky
 #exec --no-startup-id conky -c ~/.config/i3/system-overview
@@ -922,3 +922,4 @@ exec "setxkbmap -layout us"
 
 exec --no-startup-id greenclip daemon
 exec --no-startup-id aw-qt
+exec --no-startup-id dunst -conf .config/dunst/dunstrc

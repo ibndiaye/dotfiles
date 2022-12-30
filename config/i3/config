@@ -921,5 +921,4 @@ bindsym Control+mod1+b exec --no-startup-id scrcpy --hid-keyboard
 exec "setxkbmap -layout us"
 
 exec --no-startup-id greenclip daemon
-exec --no-startup-id aw-qt
 exec --no-startup-id dunst -conf .config/dunst/dunstrc

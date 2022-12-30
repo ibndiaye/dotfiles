@@ -37,7 +37,7 @@ declare -a options=(
 "stackoverflow - https://stackoverflow.com/search?q="
 "startpage - https://www.startpage.com/do/dsearch?query="
 "thesaurus - https://www.thesaurus.com/misspelling?term="
-"translate - https://translate.google.com/?sl=auto&tl=en&text="
+"gtranslate - https://translate.google.com/?sl=auto&tl=en&text="
 "urban - https://www.urbandictionary.com/define.php?term="
 "wayback - https://web.archive.org/web/*/"
 "webster - https://www.merriam-webster.com/dictionary/"
@@ -64,6 +64,7 @@ declare -a options=(
 "archive - https://archive.org/search.php?query=l"
 "pdfdrive - https://www.pdfdrive.com/search?q="
 "libgenis - https://libgen.is/search.php?req="
+"vinted - https://www.vinted.lu/catalog?search_text="
 # "quit"
 )
 

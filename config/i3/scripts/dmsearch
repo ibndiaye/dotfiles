@@ -65,6 +65,7 @@ declare -a options=(
 "pdfdrive - https://www.pdfdrive.com/search?q="
 "libgenis - https://libgen.is/search.php?req="
 "vinted - https://www.vinted.lu/catalog?search_text="
+"cheat.sh - https://cheat.sh/"
 # "quit"
 )
 

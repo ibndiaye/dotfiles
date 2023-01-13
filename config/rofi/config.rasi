@@ -173,4 +173,5 @@ display-calc:"Calculator:";
 //@theme "/usr/share/rofi/themes/android_notification.rasi"
 //@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
 //@theme "/usr/share/rofi/themes/Arc-Dark-Smoke.rasi"
-@theme "~/.config/rofi/themes/squared-nord.rasi"
+//@theme "~/.config/rofi/themes/squared-nord.rasi"
+@theme "/home/brams/.config/rofi/themes/rounded-gray-dark.rasi"

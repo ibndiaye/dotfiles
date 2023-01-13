@@ -425,13 +425,14 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # autotiling script
 # https://github.com/nwg-piotr/autotiling
 # `yay -S autotiling ;) (it is in AUR)
-#exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 5 && flameshot
+exec --no-startup-id sleep 5 && ~/.config/rofi/scripts/instantreplay.sh
 
 ###############
 # system tray #
@@ -510,7 +511,7 @@ bar {
 		font pango: Noto Sans Regular 12
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 		#status_command i3status-rs ~/.config/i3/config-rs.toml
-	    	position bottom
+	    	position top
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
@@ -594,4 +595,6 @@ bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 
 bindsym $mod+shift+e exec --no-startup-id "rofi -show emoji"
 bindsym $mod+shift+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
-bindsym $mod+shift+a exec "~/.config/i3/scripts/dmsearch"
+bindsym $mod+shift+a exec "~/.config/rofi/scripts/dmsearch"
+exec "~/.config/rofi/scripts/instantreplay.sh"
+bindsym $mod+r exec "killall -SIGUSR1 gpu-screen-recorder && exec dunstify 'Replay saved!'"

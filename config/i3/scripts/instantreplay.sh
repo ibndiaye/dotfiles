@@ -13,6 +13,6 @@ do
     if ! pgrep -x "gpu-screen-recorder" > /dev/null
     then
         gpu-screen-recorder -w screen -c mp4 -f 30 -a "$(pactl get-default-sink).monitor" -a "$(pactl get-default-source)" -a speaker/alsa_output.pci-0000_26_00.1.hdmi-stereo.monitor -q high -r 30 -o "$HOME/Videos/clips"
-        dunstify 'Instant Replay RUNning!'
+        dunstify 'Instant Replay Running!'
     fi
 done

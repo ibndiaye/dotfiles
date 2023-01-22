@@ -44,7 +44,7 @@ declare -a options=(
 "wikipedia - https://en.wikipedia.org/wiki/"
 "wiktionary - https://en.wiktionary.org/wiki/"
 "wolfram - https://www.wolframalpha.com/input/?i="
-"youtube - https://www.youtube.com/results?search_query="
+"yt - https://www.youtube.com/results?search_query="
 "larousse fr - https://www.larousse.fr/dictionnaires/francais/"
 "leboncoin - https://www.leboncoin.fr/recherche?text="
 "facebook marketplace - https://www.facebook.com/marketplace/search/?query="
@@ -61,11 +61,12 @@ declare -a options=(
 "netflix - https://www.netflix.com/search?q="
 "tg - https://torrentgalaxy.to/torrents.php?search="
 "rutracker - https://rutracker.org/forum/tracker.php?nm="
-"archive - https://archive.org/search.php?query=l"
+"archive - https://archive.org/search.php?query="
 "pdfdrive - https://www.pdfdrive.com/search?q="
 "libgenis - https://libgen.is/search.php?req="
 "vinted - https://www.vinted.lu/catalog?search_text="
 "cheat.sh - https://cheat.sh/"
+"protondb - https://www.protondb.com/search?q="
 # "quit"
 )
 

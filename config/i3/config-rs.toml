@@ -2,7 +2,7 @@
 #####I3STATUS######
 ###################
 # file="/home/brams/.config/i3/themes-rs/nord-dark.toml"
-theme = "nord-dark"
+theme = "dracula"
 icons = "awesome"
 
 [[block]]

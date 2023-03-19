@@ -128,6 +128,6 @@ map ctrl+shift+f6     						set_font_size 16.0
 
 
 # BEGIN_KITTY_THEME
-# zenwritten_dark
+# Tomorrow Night
 include current-theme.conf
 # END_KITTY_THEME

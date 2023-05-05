@@ -182,4 +182,7 @@ display-calc:"Calculator:";
 //@theme "/home/kenny/.config/rofi/themes/squared-nord.rasi"
 //@theme "/home/kenny/.config/rofi/themes/launchpad.rasi"
 //@theme "/home/kenny/.config/rofi/themes/nord-twoLines.rasi"
-@theme "/home/kenny/.config/rofi/themes/squared-nord.rasi"
+//@theme "/home/kenny/.config/rofi/themes/squared-nord.rasi"
+//@theme "/home/brams/.config/rofi/themes/squared-nord.rasi"
+//@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"

@@ -194,7 +194,7 @@ bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
 bindsym $mod+Shift+r restart
 
 # keybinding in fancy rofi (automated):
-bindsym F1 exec ~/.config/i3/scripts/keyhint-2
+#bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # alternative
 # keybinding list in editor:
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
@@ -313,14 +313,14 @@ set $ws10 "10"
 #workspace $ws4 output HDMI-0
 #workspace $ws5 output HDMI-0
 workspace $ws1 output $firstMonitor
-workspace $ws2 output $firstMonitor
+workspace $ws2 output $secondMonitor
 workspace $ws3 output $firstMonitor
-workspace $ws4 output $firstMonitor
+workspace $ws4 output $secondMonitor
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $secondMonitor
-workspace $ws7 output $secondMonitor
+workspace $ws7 output $firstMonitor
 workspace $ws8 output $secondMonitor
-workspace $ws9 output $secondMonitor
+workspace $ws9 output $firstMonitor
 workspace $ws10 output $secondMonitor
 
 # bind program to workspace and focus to them on startup:
@@ -397,7 +397,7 @@ exec --no-startup-id numlockx on
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id ~/.screenlayout/monitor.sh
+#exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 exec --no-startup-id sleep 2 && nitrogen --restore
@@ -416,7 +416,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 
 # xscreensaver
 # https://www.jwz.org/xscreensaver
-#exec --no-startup-id xscreensaver --no-splash
+exec --no-startup-id xscreensaver --no-splash
 
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
@@ -432,8 +432,8 @@ exec_always --no-startup-id autotiling
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
-exec --no-startup-id sleep 5 && flameshot
-exec --no-startup-id sleep 5 && ~/.config/rofi/scripts/instantreplay.sh
+#exec --no-startup-id sleep 5 && flameshot
+#exec --no-startup-id sleep 5 && ~/.config/rofi/scripts/instantreplay.sh
 
 ###############
 # system tray #
@@ -508,7 +508,7 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
-exec --no-startup-id ~/.config/polybar/custom/launch.sh
+exec --no-startup-id ~/.config/polybar/colorblocks/launch.sh
 #bar {
 #		font pango: Noto Sans Regular 12
 #		status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -600,6 +600,7 @@ bindsym $mod+shift+c exec --no-startup-id "rofi -show calc -modi calc -no-show-m
 bindsym $mod+shift+a exec "~/.config/rofi/scripts/dmsearch"
 #exec "~/.config/i3/scripts/instantreplay.sh"
 #bindsym $mod+r exec "killall -SIGUSR1 gpu-screen-recorder && exec dunstify 'Replay saved!'
-
+exec --no-startup-id xrandr --output HDMI-0 --primary --right-of DP-1 
 bindsym $mod+shift+u exec pavucontrol
-exec "setxkbmap -layout ch"
+bindsym Print --release exec flameshot gui
+exec --no-startup-id "setxkbmap -layout ch"
